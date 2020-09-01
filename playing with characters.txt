@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    char ch;
+    char a[90];
+    char s1[200];
+    scanf("%c",&ch); //reads a character
+    scanf("%s",a);    //reads a string
+    scanf("\n");//for new line
+	
+	
+    scanf("%[^\n]%*c", &s1);/*s. Here, [] is the scanset character.
+	^\n stands for taking input until a newline isn't encountered.
+	Then, with this %*c, it reads the newline character and here, 
+	the used * indicates that this newline character is discarded.*/
+    
+	
+	printf("%c\n%s\n%s",ch,a,s1);    
+    return 0;
+}
